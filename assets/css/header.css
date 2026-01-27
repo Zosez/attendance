@@ -1,0 +1,51 @@
+.header-section {
+	width: 30%;
+	height: 99vh;
+	background-color: #A8DF8E;
+}
+.user-info{ 
+	display: flex;
+	margin: 5px;
+	padding: 5px;
+}
+.user-image{
+	height: 60px;
+	width: 70px;
+	margin: 10px;
+	margin-top: 20px;
+}
+.user-name{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.navigation{
+	font-size: 2.2em;	
+	padding: 5px;
+	margin-left: 30px;
+}
+.nav-images{
+	width:30 px; 
+	height: 25px; 
+	padding: 2px 2px 0 2px;
+}
+.navigation a p{
+	color: black;
+}
+.navigation a p:hover{
+	color: grey;
+}
+a{
+	text-decoration: none;
+}
+.logout{
+	color: black;
+	font-size: 1.5em;	
+	justify-self: center;
+	/* margin-top: 90px; */
+	position: fixed;
+	bottom: 1%;
+	left: 7%;
+}
+.logout:hover{
+	color: grey;
+}
