@@ -1,0 +1,16 @@
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 50px;
+    
+}
+table,th,td{
+    border: 1px solid black;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    font-size: 2em;
+    background-color: #A8DF8E;
+}

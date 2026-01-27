@@ -1,9 +1,17 @@
 <?php
-	
+	include "../includes/functions.php";
 	session_start();
 
 	if(isset($_SESSION['logged_in'])){
 		$name = $_SESSION['name'];
+
+		$length = count(infoEmployee());
+
+		$dept = count(dept());
+
+		
+
+
 	}else{
 		header("Location:login.php");
 	}
@@ -33,11 +41,11 @@
 			<article class="feature-card">
 				<div class="feature">
 					<p>Total Number of Employee</p>
-					<p class="numbers">10</p>
+					<p class="numbers"><?php echo htmlspecialchars($length) ?> </p>
 				</div>
 				<div class="feature">
 					<p>Total Number of Departments</p>
-					<p class="numbers">3</p>
+					<p class="numbers"><?php echo htmlspecialchars($dept) ?></p>
 				</div>
 				<div class="feature">
 					<p>Total Number of Leave requests</p>
