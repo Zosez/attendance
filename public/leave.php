@@ -25,11 +25,21 @@
 
 		<main class="main-right">
 			<p class="home-welcome"> Leave list  </p>
+			<div class="filter">
+				<p class="filter-text"><img src="../images/filter.png" class="nav-images">Filter: </p>
+				<select class="filter-option" id="filter-option">
+					<option value="all">All</option>
+					<option value="Pending">Pending</option>
+					<option value="Approved">Approved</option>
+					<option value="Rejected">Rejected</option>
+				</select>
+			</div>
 
 			<article class="leave-table">
 
 				<table class="table" id="leave_table">
 					<tr>
+						<th>Leave ID</th>
 						<th>Name</th>
 						<th>Leave Date</th>
 						<th>Leave Type</th>

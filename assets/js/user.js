@@ -19,7 +19,8 @@ async function addLeave(){
 	let date = document.getElementById("leave-date").value.trim();
 	let type = document.getElementById("leave-type").value.trim();
 	let reason = document.getElementById("leave-reason").value.trim();
-	let name = document.getElementById("leave-name").value.trim();
+	let name = document.getElementById("leave-name").value;
+	console.log(name);
 
 	if(date!="" && type!="" && reason!=""){
 
@@ -37,7 +38,6 @@ async function addLeave(){
 		});
 
 		if(response.ok){
-			console.log(response);
 			leaveForm.reset();
 			popUp.style.display="none";
 			alert("Leave request submitted sucessfully");

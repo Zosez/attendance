@@ -55,7 +55,7 @@
 			<label>Reason for leave:</label>
 			<textarea id="leave-reason"></textarea>
 			
-			<input type="hidden" id="leave-name" value=<?php echo $name ?>>
+			<input type="hidden" id="leave-name" value="<?php echo htmlspecialchars($name) ?>">
 			<input type="button" value="Submit" class="leave-submit" id="leave-submit" onclick="addLeave()">
 		</form>
 	</aside>

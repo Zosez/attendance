@@ -31,5 +31,11 @@ th{
     width: 100%;
 }
 #delete-btn{
-    background-color: red;
+    background-color: #FF746C;
+}
+#edit-btn{
+    background-color: #A8DF8E;
+}
+#delete-btn:hover , #edit-btn:hover{
+    background-color: grey;
 }

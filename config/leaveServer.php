@@ -11,6 +11,10 @@
 		addLeave();
 	}
 
+	if ($_SERVER['REQUEST_METHOD']=="PUT"){
+		editLeave();
+	}
+
 
 
 	function addLeave(){
@@ -54,18 +58,36 @@
 		if(isset($result)){
 			foreach($result as $leave){
 
-			$allLeave[]=['name'=>$leave['fullname'],
+			$allLeave[]=['Id'=>$leave['leaveID'],
+				'name'=>$leave['fullname'],
 				'leave_date'=>$leave['leave_date'],
 				'leave_type'=>$leave['leave_type'],
 				'status'=>$leave['status'],
 				'reason'=>$leave['reason'],
 			];
-			return json_encode($allLeave);
+			
+			
 		}
-		
+		return json_encode($allLeave);
 		}
+	}
 
-		
+	function editLeave(){
+		global $pdo;
+		if(isset($_REQUEST['leaveId'])){
+
+			$id = $_REQUEST['leaveId'];
+			$status = $_REQUEST['status'];
+			try{
+				$stmt = $pdo->prepare("UPDATE leaves SET status = ? WHERE leaveID = ?");
+				$stmt->execute([$status,$id]);
+			}catch(PDOException $e){
+				echo $e->getMessage();
+			}
+			
+		}else{
+			http_response_code(500);
+		}
 	}
 
 

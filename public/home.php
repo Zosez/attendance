@@ -10,7 +10,7 @@
 
 		$dept = count(dept());
 
-		
+		$leaveNum = count(leaveNum());
 
 
 	}else{
@@ -50,7 +50,7 @@
 				</div>
 				<div class="feature">
 					<p>Total Number of Leave requests</p>
-					<p class="numbers">7</p>
+					<p class="numbers"><?php echo htmlspecialchars($leaveNum) ?></p>
 				</div>
 				
 			</article>

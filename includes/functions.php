@@ -49,6 +49,22 @@
         }
 
     }
+    function leaveNum(){
+
+        try{
+            global $pdo;
+
+            $dept = $pdo->query("Select leaveID from leaves");
+
+            $rows=$dept->fetchAll(PDO::FETCH_ASSOC);
+
+            return $rows;
+            
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+
+    }
 
 
 ?>

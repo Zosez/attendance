@@ -6,9 +6,9 @@
 			</div>
 
 			<nav class="navigation">
-				<a href="../public/home.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon">Home</p></a>
+				<a href="../public/user.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon">Home</p></a>
 				
-				<a href="../public/leave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
+				<a href="../public/user.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
 
 			</nav>
 

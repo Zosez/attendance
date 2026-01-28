@@ -14,3 +14,29 @@ th{
     font-size: 2em;
     background-color: #A8DF8E;
 }
+.reject-button{
+    width: 100%;
+    background-color: #FF746C;
+}
+.approve-button{
+    width: 100%;
+    background-color: #A8DF8E;
+}
+.reject-button:hover, .approve-button:hover{
+    background-color: grey;
+}
+.filter{
+    font-size: 2.1em;
+    display: flex;
+    margin-left: 100px;
+    
+    
+}
+.filter-option{
+    font-weight: bold;
+    height: 30px;
+    align-self: center;
+    padding: 3px;
+    margin: 5px;
+    
+}

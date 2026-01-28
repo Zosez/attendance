@@ -41,6 +41,8 @@ a{
 	width: 65%;
 	padding: 10px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	align-items: center;
+
 }
 .login-form{
 	display: grid;
