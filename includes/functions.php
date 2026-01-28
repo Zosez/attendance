@@ -12,7 +12,19 @@
 
         $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        return $rows;
+        foreach ($rows as $emp) {
+            
+            $allEmployee[] = ['ID'=>$emp['empId'],
+                            'name'=>$emp['fullname'],
+                            'email'=>$emp['email'],
+                            'dept'=>$emp['department'],
+                            'role'=>$emp['role'],
+                            'joined_at'=>$emp['joined_at'],
+                            ];
+        }
+
+        return json_encode($allEmployee);
+        
 
         }catch (PDOException $e){
 
@@ -20,6 +32,7 @@
         }
 
     }
+
     function dept(){
 
         try{

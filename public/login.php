@@ -19,23 +19,31 @@
 					$stmt->execute([$email]);
 
 					$result = $stmt->fetch(PDO::FETCH_ASSOC);
+					if($result){
 
-					if(password_verify(trim($_POST['login_password']), $result['password'])  ){
 
-						session_regenerate_id(true);
-						$_SESSION['logged_in']=true;
-						$_SESSION['name']=$result['fullname'];
+						if(password_verify(trim($_POST['login_password']), $result['password'])  ){
 
-						if($result['role']=="admin"){
-							header("Location:home.php");
+							session_regenerate_id(true);
 							
+							$_SESSION['logged_in']=true;
+							$_SESSION['name']=$result['fullname'];
+							$_SESSION['role']=$result['role'];
+
+							if($_SESSION['role']=="admin"){
+								header("Location:home.php");
+								
+							}else{
+								header("Location:user.php");
+							}
+
+
 						}else{
-							$error="user logged_in";
+							$error="User not found";
 						}
-
-
+					}else{
+						$error="User not found";
 					}
-
 					}catch(Exception $e){
 
 					}

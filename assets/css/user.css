@@ -1,0 +1,79 @@
+*{
+	z-index: 1;
+}
+
+.leave-text{
+	font-size:2em;
+
+}
+
+.attendance , .req-leave{
+	margin-top: 70px;
+	margin-left: 40px;
+	display: inline-block;
+}
+
+.attendance-btn{
+	width: 200px;
+	height: 100px;
+	margin-left: 200px;
+	background-color: #A8DF8E;
+	border-radius: 8px;
+
+}
+.attendance-btn:hover{
+
+	background-color: grey;
+}
+
+
+.pop-up{
+	border: 1px solid #ccc;
+	width: 35%;
+	height: 60%;
+	justify-self: center;
+	position: fixed;
+	top: 15%;
+	border-radius: 8px;
+	z-index: 100;
+	background-color: white;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	display: none;
+	
+}
+.leave-form{
+	display: grid;
+	padding: 10px;
+	margin-left: 5px;
+}
+.leave-form label{
+	font-size: 1.2em;
+	margin: 3px;
+}
+.leave-submit{
+	background-color: #A8DF8E;
+	border-radius: 8px;
+	height: 50px;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 10px;
+
+}
+.leave-submit:hover{
+	background-color: grey;
+}
+textarea{
+	height: 80px;
+	border-radius: 8px;
+}
+.close{
+	border-radius: 100px;
+	background-color: red;
+	width: 10px;
+	float: right;
+	margin: 3px;
+	padding: 5px;
+	font-size: 0.7em;
+	font-weight: bolder;
+	color: white;
+}

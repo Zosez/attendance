@@ -2,10 +2,11 @@
 	include "../includes/functions.php";
 	session_start();
 
-	if(isset($_SESSION['logged_in'])){
+	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='admin'){
+
 		$name = $_SESSION['name'];
 
-		$length = count(infoEmployee());
+		$length = count(json_decode(infoEmployee()));
 
 		$dept = count(dept());
 

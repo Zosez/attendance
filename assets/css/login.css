@@ -40,7 +40,7 @@ a{
 	/*border: 1px solid black;*/
 	width: 55%;
 	padding: 10px;
-	border: 10px ridge #333;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .login-form{
 	display: grid;

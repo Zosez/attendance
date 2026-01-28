@@ -7,9 +7,8 @@
 
 			<nav class="navigation">
 				<a href="../public/home.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon">Home</p></a>
-				<a href="../public/employee.php"><p><img src="../images/employee.png" class="nav-images" alt="Employees icon">Employee</p></a>
-				<a href="../public/attendance.php"><p><img src="../images/attendance.png" class="nav-images"alt="Attendance icon">Attendence</p></a>
-				<a href="../public/leave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave</p></a>
+				
+				<a href="../public/leave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
 
 			</nav>
 

@@ -1,9 +1,11 @@
 <?php
 
-	include "../includes/functions.php";
+	session_start();
+	$name = $_SESSION['name'];
 
-	$info = infoEmployee();
-
+	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
+		header("location:login.php");
+	}
 
 ?>
 
@@ -30,9 +32,8 @@
 
 			<article class="employee-table">
 
-				
-
-				<table class="table">
+				<input type="text" class="search-emp" id="serch_emp" placeholder="Search">
+				<table class="table" id="employee_table">
 					<tr>
 						<th>Employee ID</th>
 						<th>Name</th>
@@ -41,27 +42,42 @@
 						<th>Role</th>
 						<th>Joined At</th>
 					</tr>
-					
-			<?php
-				foreach($info as $emp){
+					<tr>
+						<td>12</td>
+						<td>Eureca</td>
+						<td>1asdasdas@gmail.com</td>
+						<td>HR</td>
+						<td>user</td>
+						<td>123123123</td>
+						<td><button class="emp-button" id="edit-btn">Edit</button><br><button class="emp-button" id="delete-btn">Delete</button></td>
 
-						echo "<tr>";
-						echo "<td>" . $emp['eID'] . "</td>";
-						echo "<td>" . $emp['fullname'] . "</td>";
-						echo "<td>" . $emp['email'] . "</td>";
-						echo "<td>" . $emp['department'] . "</td>";
-						echo "<td>" . $emp['role'] . "</td>";
-						echo "<td>" . $emp['joined_at'] . "</td>";
-						echo "</tr>";
+					</tr>
 					
-				}
-			?>					
+							
 				</table>
+
+				<form class="edit-form" id="edit-form">
+					<input type="hidden" id="edit-id">	
+					<label>Full Name:</label>
+					<input type="text" id="edit-name">
+					<label>Email:</label>
+					<input type="Email" id="edit-email">
+					<label>Department:</label>
+					<input type="Text" id="edit-department">
+					<label>Role:</label>
+					<select id="edit-role">
+						<option value="user">User</option>
+						<option value="admin">Admin</option>
+					</select>
+					<input id="edit-btn" value="Submit" type="button" onclick="editBtn()">
+				</form>
 				
 			</article>
 		</main>
 	</section>
 
 	<?php include "../includes/footer.php" ?>
+
+	<script src="../assets/js/employee.js"></script>
 </body>
 </html>

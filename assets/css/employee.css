@@ -14,3 +14,22 @@ th{
     font-size: 2em;
     background-color: #A8DF8E;
 }
+
+.search-emp{
+    width: 40%;
+    height: 30px;
+    margin: 10px 0 10px 60px;
+    padding: 3px;
+
+}
+.edit-form{
+    display: none;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+.emp-button{
+    width: 100%;
+}
+#delete-btn{
+    background-color: red;
+}

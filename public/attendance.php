@@ -1,3 +1,13 @@
+<?php
+
+	session_start();
+	$name = $_SESSION['name'];
+	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
+		header("location:login.php");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
