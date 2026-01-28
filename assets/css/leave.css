@@ -38,5 +38,15 @@ th{
     align-self: center;
     padding: 3px;
     margin: 5px;
-    
+}
+.approved-text{
+    color: #A8DF8E;
+    font-weight: bold;
+}
+.rejected-text{
+    color: #FF746C;
+    font-weight: bold;
+}
+.pending-text{
+    font-weight: bold;
 }

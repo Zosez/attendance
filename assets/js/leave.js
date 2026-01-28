@@ -28,11 +28,21 @@ function renderLeave(leaveList){
 				<td>${leave['leave_date']}</td>
 				<td>${leave['leave_type']}</td>
 				<td>${leave['reason']}</td>
-				<td>${leave['status']}</td>
+				<td class="pending-text">${leave['status']}</td>
 				<td><button class="approve-button" id="approve-btn" 
 				onclick="decision('Approved',${leave['Id']})" >Approve</button>
 				<br><button class="reject-button" id="delete-btn" onclick="decision('Rejected',${leave['Id']})">Reject</button></td>
 			`;
+			table.appendChild(tableElement);
+		}else if(leave['status'].toLowerCase()==="approved"){
+			tableElement.innerHTML = `
+				<td>${leave['Id']}</td>
+				<td>${leave['name']}</td>
+				<td>${leave['leave_date']}</td>
+				<td>${leave['leave_type']}</td>
+				<td>${leave['reason']}</td>
+				<td class="approved-text">${leave['status']}</td>`;
+
 			table.appendChild(tableElement);
 		}else{
 			tableElement.innerHTML = `
@@ -41,7 +51,7 @@ function renderLeave(leaveList){
 				<td>${leave['leave_date']}</td>
 				<td>${leave['leave_type']}</td>
 				<td>${leave['reason']}</td>
-				<td>${leave['status']}</td>`;
+				<td class="rejected-text">${leave['status']}</td>`;
 
 			table.appendChild(tableElement);
 		}
