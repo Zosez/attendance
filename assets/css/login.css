@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+	
+
 ::-webkit-scrollbar{
 	display: none;
 }
-*{
-	font-family: serif;
-}
+
 html,body{
 	margin: 0;
 	padding: 0;

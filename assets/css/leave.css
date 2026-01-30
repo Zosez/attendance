@@ -2,6 +2,7 @@ table{
     border-collapse: collapse;
     width: 90%;
     margin-left: 50px;
+    margin-bottom: 10px;
     
 }
 table,th,td{
@@ -9,9 +10,10 @@ table,th,td{
 }
 th,td{
     padding: 10px;
+    text-align: center;
 }
 th{
-    font-size: 2em;
+    font-size: 1.5em;
     background-color: #A8DF8E;
 }
 .reject-button{
@@ -28,25 +30,47 @@ th{
 .filter{
     font-size: 2.1em;
     display: flex;
-    margin-left: 100px;
-    
+    justify-self: right;
+    margin-right: 60px;
     
 }
 .filter-option{
-    font-weight: bold;
-    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 22px;
     align-self: center;
     padding: 3px;
     margin: 5px;
+    margin-top: 10px;
+
 }
 .approved-text{
-    color: #A8DF8E;
+    background-color: #A8DF8E;
+    color: white;
     font-weight: bold;
+    justify-self: center;
+    padding: 5px;
+    border-radius: 10px;
 }
 .rejected-text{
-    color: #FF746C;
+    background-color: #FF746C;
+    color: white;
     font-weight: bold;
+    justify-self: center;
+    padding: 5px;
+    border-radius: 10px;
 }
 .pending-text{
     font-weight: bold;
+    justify-self: center;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #ADD8E6;
+}
+.filter-text{
+    font-size: 0.7em;
+}
+.filter-image{
+    height: 17px;
+    width: 20px;
 }

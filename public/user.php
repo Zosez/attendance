@@ -1,8 +1,21 @@
 <?php
-
-	session_start();
+	include "../config/db.php";
+	include "../config/session.php";
 	$name=$_SESSION['name'];
+	$id = $_SESSION['empId'];
+
 	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
+
+		if ($_SERVER['REQUEST_METHOD']=="POST") {
+			if (isset($_POST['attendance-btn'])){
+				global $pdo;
+				try{
+					$pdo->query("Insert into attendance(empId) values ($id);");	
+				}catch(PDOException $e){
+					
+				}
+			}
+		}
 
 	}else{
 		header("location:login.php");
@@ -29,7 +42,10 @@
 
 			<article class="attendance">
 				<h3 class="leave-text">Today's Attendance: </h3>
-				<button class="attendance-btn">Present</button>
+				<form method="POST">
+					<button class="attendance-btn" name="attendance-btn" type="Submit" >Present</button>	
+				</form>
+				
 			</article>
 
 			<div class="req-leave">
@@ -54,7 +70,7 @@
 			</select>
 			<label>Reason for leave:</label>
 			<textarea id="leave-reason"></textarea>
-			
+			<input type="hidden" id="emp-id" value="<?php echo htmlspecialchars($id) ?>">
 			<input type="hidden" id="leave-name" value="<?php echo htmlspecialchars($name) ?>">
 			<input type="button" value="Submit" class="leave-submit" id="leave-submit" onclick="addLeave()">
 		</form>

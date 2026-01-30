@@ -20,11 +20,13 @@ async function addLeave(){
 	let type = document.getElementById("leave-type").value.trim();
 	let reason = document.getElementById("leave-reason").value.trim();
 	let name = document.getElementById("leave-name").value;
-	console.log(name);
+	let empId = document.getElementById("emp-id").value;
+	
 
 	if(date!="" && type!="" && reason!=""){
 
 		const newLeave = {
+			empId:empId,
 			name:name,
 			date:date,
 			type:type,

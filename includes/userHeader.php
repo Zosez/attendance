@@ -8,7 +8,9 @@
 			<nav class="navigation">
 				<a href="../public/user.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon">Home</p></a>
 				
-				<a href="../public/user.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
+				<a href="../public/userLeave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
+
+				<a href="../public/userAttendance.php"><p><img src="../images/attendance.png" class="nav-images" alt="Leave icon">Attendance History</p></a>
 
 			</nav>
 

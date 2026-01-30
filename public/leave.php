@@ -1,6 +1,6 @@
 <?php
 
-	session_start();
+	include "../config/session.php";
 	$name = $_SESSION['name'];
 	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
 		header("location:login.php");
@@ -24,14 +24,20 @@
 		<?php include "../includes/header.php" ?>
 
 		<main class="main-right">
-			<p class="home-welcome"> Leave list  </p>
+			<p class="home-welcome"> Leave List  </p>
 			<div class="filter">
-				<p class="filter-text"><img src="../images/filter.png" class="nav-images">Filter: </p>
+				<p class="filter-text"><img src="../images/filter.png" class="filter-image">Filter: </p>
 				<select class="filter-option" id="filter-option">
 					<option value="all">All</option>
 					<option value="Pending">Pending</option>
 					<option value="Approved">Approved</option>
 					<option value="Rejected">Rejected</option>
+				</select>
+				<select class="filter-option" id="filter-type">
+					<option value="all">All</option>
+					<option value="Casual Leave">Casual</option>
+					<option value="Menstrual Leave">Menstrual</option>
+					<option value="Sick Leave">Sick</option>
 				</select>
 			</div>
 

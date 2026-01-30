@@ -1,6 +1,6 @@
 <?php
 
-	session_start();
+	include "../config/session.php";
 	$name = $_SESSION['name'];
 
 	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
@@ -42,17 +42,6 @@
 						<th>Role</th>
 						<th>Joined At</th>
 					</tr>
-					<tr>
-						<td>12</td>
-						<td>Eureca</td>
-						<td>1asdasdas@gmail.com</td>
-						<td>HR</td>
-						<td>user</td>
-						<td>123123123</td>
-						<td><button class="emp-button" id="edit-btn">Edit</button><br><button class="emp-button" id="delete-btn">Delete</button></td>
-
-					</tr>
-					
 							
 				</table>
 

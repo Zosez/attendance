@@ -42,7 +42,7 @@
 
             $rows=$dept->fetchAll(PDO::FETCH_ASSOC);
 
-            return $rows;
+            return count($rows);
             
         }catch(PDOException $e){
             echo $e->getMessage();
@@ -54,16 +54,30 @@
         try{
             global $pdo;
 
-            $dept = $pdo->query("Select leaveID from leaves");
+            $dept = $pdo->query("Select leaveID from leaves where status='Pending'");
 
             $rows=$dept->fetchAll(PDO::FETCH_ASSOC);
 
-            return $rows;
+            return count($rows);
             
         }catch(PDOException $e){
             echo $e->getMessage();
         }
 
+    }
+    function present(){
+        try{
+            global $pdo;
+            $date=date("Y-m-d");
+            
+            $pre = $pdo->query("Select empId from attendance where attendance_date='{$date}';");
+
+            $rows = $pre->fetchAll(PDO::FETCH_ASSOC);
+
+            return count($rows);
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
     }
 
 

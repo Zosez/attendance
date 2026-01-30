@@ -1,6 +1,10 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light grey background makes the white cards pop */
+}
 .header-section {
 	width: 30%;
-	height: 99vh;
+	min-height: 99vh;
 	background-color: #A8DF8E;
 }
 .user-info{ 
@@ -19,7 +23,7 @@
 	font-weight: bold;
 }
 .navigation{
-	font-size: 2.2em;	
+	font-size: 1.7em;	
 	padding: 5px;
 	margin-left: 30px;
 }
@@ -27,6 +31,7 @@
 	width:30 px; 
 	height: 25px; 
 	padding: 2px 2px 0 2px;
+	margin-right: 5px;
 }
 .navigation a p{
 	color: black;

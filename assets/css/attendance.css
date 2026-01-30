@@ -1,0 +1,29 @@
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 50px;
+    
+}
+table,th,td{
+    border: 1px solid black;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    font-size: 1.3em;
+    background-color: #A8DF8E;
+}
+/*.search-date{
+    margin: 10px;
+    margin-right: 70px;
+    float: right;
+}*/
+.filter{
+    
+    justify-self: right;
+    
+    margin: 10px;
+    margin-right: 70px;
+}

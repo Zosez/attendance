@@ -1,6 +1,6 @@
 <?php
 	include "../includes/functions.php";
-	session_start();
+	include "../config/session.php";
 
 	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='admin'){
 
@@ -8,15 +8,17 @@
 
 		$length = count(json_decode(infoEmployee()));
 
-		$dept = count(dept());
+		$dept = dept();
 
-		$leaveNum = count(leaveNum());
+		$leaveNum = leaveNum();
+
+		$presentEmployee = present();
 
 
 	}else{
 		header("Location:login.php");
 	}
-
+ 
 ?>
 
 
@@ -49,8 +51,12 @@
 					<p class="numbers"><?php echo htmlspecialchars($dept) ?></p>
 				</div>
 				<div class="feature">
-					<p>Total Number of Leave requests</p>
+					<p>Total Number of pending Leave requests</p>
 					<p class="numbers"><?php echo htmlspecialchars($leaveNum) ?></p>
+				</div>
+				<div class="feature">
+					<p>Total Employee present</p>
+					<p class="numbers"><?php echo htmlspecialchars($presentEmployee) ?></p>
 				</div>
 				
 			</article>

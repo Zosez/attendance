@@ -1,6 +1,4 @@
-*{
-	z-index: 1;
-}
+
 
 .leave-text{
 	font-size:2em;
@@ -19,10 +17,11 @@
 	margin-left: 200px;
 	background-color: #A8DF8E;
 	border-radius: 8px;
-
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	font-size: 1.3em;
+	font-weight: bold;
 }
 .attendance-btn:hover{
-
 	background-color: grey;
 }
 

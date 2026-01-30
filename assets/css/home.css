@@ -15,31 +15,36 @@ html,body{
 
 .main-right{
 	width: 100%;
-	height: 99vh;
+	min-height: 99vh;
 }
 .home-welcome{
-	font-size: 2.3em;
+	font-size: 2.7em;
 	font-weight: bold;
 	justify-self: center;
+	margin-top: 20px;
 }
 .feature-card{
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto ;
+	row-gap: 20px;
 	margin: 20px;
-	margin-top: 100px;
 	justify-content: space-around;
+
 }
 .feature{
-	border: 1px solid black;
+	
 	border-radius: 8px;
 	padding: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .feature p{
 	font-size: 1.6em;
+	justify-self: center;
 }
 .feature .numbers{
 	font-size: 3em;
 	font-weight: bold;
-	justify-self: center;
+	
 }
 
 

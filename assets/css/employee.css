@@ -9,9 +9,10 @@ table,th,td{
 }
 th,td{
     padding: 10px;
+    text-align: center;
 }
 th{
-    font-size: 2em;
+    font-size: 1.3em;
     background-color: #A8DF8E;
 }
 

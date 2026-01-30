@@ -1,7 +1,9 @@
 <?php
 
 	include "db.php";
-
+	header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: *");
+    
 
 	if ($_SERVER['REQUEST_METHOD']=="GET"){
 		echo viewLeave();
@@ -24,15 +26,15 @@
 		$rawData = file_get_contents("php://input");
 
 		$data=json_decode($rawData,true);
-
+		$empId=$data['empId'];
 		$name=$data['name'];
 		$date=$data['date'];
 		$type=$data['type'];
 		$reason=$data['reason'];
 		try{
-			$stmt = $pdo->prepare("Insert into leaves(fullname,reason,leave_date,leave_type) values (?,?,?,?);");
+			$stmt = $pdo->prepare("Insert into leaves(empId,fullname,reason,leave_date,leave_type) values (?,?,?,?,?);");
 
-			$stmt->execute([$name,$reason,$date,$type]);	
+			$stmt->execute([$empId,$name,$reason,$date,$type]);	
 
 			echo viewLeave();
 

@@ -1,0 +1,32 @@
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 50px;
+    
+}
+table,th,td{
+    border: 1px solid black;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    font-size: 1.5em;
+    background-color: #A8DF8E;
+}
+.status-text{
+    font-weight: bold;
+    justify-self: center;
+    padding: 8px;
+    border-radius: 10px;
+}
+#pending{
+    background-color: #ADD8E6;
+}
+#rejected{
+    background-color: #FF746C;
+}
+#approved{
+    background-color: #A8DF8E;
+}

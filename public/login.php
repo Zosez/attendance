@@ -1,56 +1,68 @@
 <?php
 
 	include "../config/db.php";
-	session_start();
+	include "../config/session.php";
 	$error="";
 
 	global $pdo;
+
+	if(empty($_SESSION['csrftoken'])){
+        $_SESSION['csrftoken']=bin2hex(random_bytes(32));
+    }
+
+
 	if($_SERVER['REQUEST_METHOD']=="POST"){
 
 		if ($_POST['login_button']){
 
 			if( trim($_POST['login_password'])!=""&trim($_POST['login_email'])!=""){
 
-				if(filter_var($_POST['login_email'],FILTER_VALIDATE_EMAIL)){
-					try{
+				if($_POST['csrf_token']===$_SESSION['csrftoken']){
 
-					$email=$_POST['login_email'];
-					$stmt = $pdo->prepare("SELECT email,fullname,password,role from employee where email=?");
-					$stmt->execute([$email]);
+					if(filter_var($_POST['login_email'],FILTER_VALIDATE_EMAIL)){
+						try{
 
-					$result = $stmt->fetch(PDO::FETCH_ASSOC);
-					if($result){
+						$email=$_POST['login_email'];
+						$stmt = $pdo->prepare("SELECT empId,email,fullname,password,role from employee where email=?");
+						$stmt->execute([$email]);
+
+						$result = $stmt->fetch(PDO::FETCH_ASSOC);
+						if($result){
 
 
-						if(password_verify(trim($_POST['login_password']), $result['password'])  ){
+							if(password_verify(trim($_POST['login_password']), $result['password'])  ){
 
-							session_regenerate_id(true);
-							
-							$_SESSION['logged_in']=true;
-							$_SESSION['name']=$result['fullname'];
-							$_SESSION['role']=$result['role'];
-
-							if($_SESSION['role']=="admin"){
-								header("Location:home.php");
+								session_regenerate_id(true);
 								
-							}else{
-								header("Location:user.php");
-							}
+								$_SESSION['logged_in']=true;
+								$_SESSION['empId']=$result['empId'];
+								$_SESSION['name']=$result['fullname'];
+								$_SESSION['role']=$result['role'];
+
+								if($_SESSION['role']=="admin"){
+									header("Location:home.php");
+									
+								}else{
+									header("Location:user.php");
+								}
 
 
+								}else{
+									$error="User not found";
+								}
 						}else{
-							$error="User not found";
-						}
-					}else{
 						$error="User not found";
+						}
+						}catch(Exception $e){
+
+						}
+
+
+					}else{
+						$error = "Format of email is not correct";
 					}
-					}catch(Exception $e){
-
-					}
-
-
 				}else{
-					$error = "Format of email is not correct";
+					die("Invalid csrf token");
 				}
 			}else{
 				$error="All Fields need to be filled";
@@ -82,6 +94,7 @@
 					<input type="Email" name="login_email" placeholder="johndoe@gmail.com">
 					<label>Password: </label>
 					<input type="password" name="login_password" placeholder="Enter your password here">
+					<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrftoken'] ?>">
 					<p class="message" style="color:red;"><?php echo $error ?></p>
 					<input type="submit" name="login_button" value="Log In" class="login-submit">
 				</form>
