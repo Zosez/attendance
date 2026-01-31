@@ -44,11 +44,11 @@
 			<p class="home-welcome">Profile</p>
 
 			<article class="details">
-				<p class="user-details">Employee ID: <?php echo htmlspecialchars($id) ?></p>
-				<p class="user-details">Name: <?php echo htmlspecialchars($name) ?></p>
-				<p class="user-details">Email: <?php echo htmlspecialchars($email) ?></p>
-				<p class="user-details">Department: <?php echo htmlspecialchars($department) ?></p>
-				<p class="user-details">Joined at: <?php echo htmlspecialchars($joinedAt) ?></p>
+				<p class="user-details">Employee ID: <b><?php echo htmlspecialchars($id) ?></b></p>
+				<p class="user-details">Name: <b><?php echo htmlspecialchars($name) ?></b></p>
+				<p class="user-details">Email: <b><?php echo htmlspecialchars($email) ?></b></p>
+				<p class="user-details">Department: <b><?php echo htmlspecialchars($department) ?></b></p>
+				<p class="user-details">Joined at: <b><?php echo htmlspecialchars($joinedAt) ?></b></p>
 			</article>
 			
 			

@@ -39,7 +39,7 @@
 		<?php include "../includes/header.php" ?>
 
 		<main class="main-right">
-			<p class="home-welcome">Welcome to Hazir dashboard <?php echo htmlspecialchars($name) ?> !!!</p>
+			<p class="home-welcome">Welcome to Hazir dashboard <?php echo htmlspecialchars($name) ?> !</p>
 
 			<article class="feature-card">
 				<div class="feature">
@@ -51,7 +51,7 @@
 					<p class="numbers"><?php echo htmlspecialchars($dept) ?></p>
 				</div>
 				<div class="feature">
-					<p>Total Number of pending Leave requests</p>
+					<p>Total Number of pending Leave Requests</p>
 					<p class="numbers"><?php echo htmlspecialchars($leaveNum) ?></p>
 				</div>
 				<div class="feature">

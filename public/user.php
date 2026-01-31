@@ -1,10 +1,19 @@
 <?php
 	include "../config/db.php";
 	include "../config/session.php";
+
+	include "../includes/functions.php";
+
 	$name=$_SESSION['name'];
 	$id = $_SESSION['empId'];
 
 	if(isset($_SESSION['logged_in']) & $_SESSION['role']==='user'){
+
+		$totalPending = totalLeave($id);
+
+		$attendance = todaysAttendance($id);
+
+		
 
 		if ($_SERVER['REQUEST_METHOD']=="POST") {
 			if (isset($_POST['attendance-btn'])){
@@ -55,6 +64,17 @@
 				</div>
 
 			</article>
+
+			<aside class="feature-card">
+				<div class="feature">
+					<p>Today's Attendance Remark</p>
+					<p class="numbers"><?php echo htmlspecialchars($attendance) ?> </p>
+				</div>
+				<div class="feature">
+					<p>Total pending Leave Requests</p>
+					<p class="numbers"><?php echo htmlspecialchars($totalPending) ?></p>
+				</div>
+			</aside>
 			
 		</main>
 	</section>

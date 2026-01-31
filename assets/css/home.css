@@ -29,6 +29,7 @@ html,body{
 	row-gap: 20px;
 	margin: 20px;
 	justify-content: space-around;
+	
 
 }
 .feature{
@@ -36,6 +37,8 @@ html,body{
 	padding: 10px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 	text-align: center;
+	/* background-color: #A8DF8E; */
+	background-color: #ADD8E6;
 }
 .feature p{
 	font-size: 1.6em;

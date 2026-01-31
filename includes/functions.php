@@ -80,5 +80,40 @@
         }
     }
 
+    function totalLeave($id){
+        try{
+            global $pdo;
+
+            $dept = $pdo->query("Select leaveID from leaves where status='Pending' and empId=$id ");
+
+            $rows=$dept->fetchAll(PDO::FETCH_ASSOC);
+
+            return count($rows);
+            
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
+    function todaysAttendance($id){
+        try{
+            global $pdo;
+            $date=date("Y-m-d");
+            
+            $pre = $pdo->query("Select empId from attendance where attendance_date='{$date}' and empId=$id;");
+
+            $rows = $pre->fetchAll(PDO::FETCH_ASSOC);
+
+            if(count($rows)>0){
+                return "Present";
+            }else{
+                return "Not punched in";
+            }
+            
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
 
 ?>
