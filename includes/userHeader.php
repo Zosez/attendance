@@ -12,6 +12,8 @@
 
 				<a href="../public/userAttendance.php"><p><img src="../images/attendance.png" class="nav-images" alt="Leave icon">Attendance History</p></a>
 
+				<a href="../public/userProfile.php"><p><img src="../images/user.png" class="nav-images" alt="Leave icon">Profile</p></a>
+
 			</nav>
 
 			<a href="logout.php"><p class="logout"><img src="../images/logout.png" class="nav-images" alt="Logout icon">Log Out </p></a>

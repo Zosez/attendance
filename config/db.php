@@ -1,4 +1,9 @@
 <?php 
+	// $servername="localhost";
+	// $username="np03cs4a240115";
+	// $password="3u9UrZYaiW";
+	// $database="np03cs4a240115";
+
 	$servername="localhost";
 	$username="root";
 	$password="";

@@ -4,12 +4,12 @@
 	font-size:2em;
 
 }
-
-.attendance , .req-leave{
+article{
+	display: flex;
+	justify-content: space-evenly;
 	margin-top: 70px;
-	margin-left: 40px;
-	display: inline-block;
 }
+
 
 .attendance-btn{
 	width: 200px;
@@ -76,3 +76,5 @@ textarea{
 	font-weight: bolder;
 	color: white;
 }
+
+

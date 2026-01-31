@@ -39,7 +39,7 @@
 		<?php include "../includes/userHeader.php" ?>
 
 		<main class="main-right">
-			<p class="home-welcome">Leave History</p>
+			<p class="home-welcome">Attendance History</p>
 
 			<table class="table" id="leave_table">
 					<tr>

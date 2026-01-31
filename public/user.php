@@ -40,18 +40,22 @@
 		<main class="main-right">
 			<p class="home-welcome">Welcome to Hazir dashboard <?php echo htmlspecialchars($name) ?> !!!</p>
 
-			<article class="attendance">
-				<h3 class="leave-text">Today's Attendance: </h3>
-				<form method="POST">
-					<button class="attendance-btn" name="attendance-btn" type="Submit" >Present</button>	
-				</form>
-				
-			</article>
+			<article>
+				<div class="attendance">
+					<h3 class="leave-text">Today's Attendance: </h3>
+					<form method="POST">
+						<button class="attendance-btn" name="attendance-btn" type="Submit" >Present</button>	
+					</form>
+					
+				</div>
 
-			<div class="req-leave">
-				<h3 class="leave-text">Request for leave:</h3>
-				<button class="attendance-btn" id="leave-btn">Request</button>
-			</div>
+				<div class="req-leave">
+					<h3 class="leave-text">Request for leave:</h3>
+					<button class="attendance-btn" id="leave-btn">Request</button>
+				</div>
+
+			</article>
+			
 		</main>
 	</section>
 
