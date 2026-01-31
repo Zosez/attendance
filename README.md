@@ -47,28 +47,28 @@ Follow these steps to run the project
 
 ### Ajax Features
 
--Live attendance, leave updates based on filter selection (without page reload)
--Live leave request submission (without page reload)
--Live status change by admin (without page reload)
--Dynamic data fetching using REST API 
+- Live attendance, leave updates based on filter selection (without page reload)
+- Live leave request submission (without page reload)
+- Live status change by admin (without page reload)
+- Dynamic data fetching using REST API 
 
 ### Security Features
 
--Prepared statements to prevent SQL Injection
--Output escaping using htmlspecialchars() to prevent XSS
--Session-based authentication to protect restricted pages
--CSRF token implementation on login authentication to prevent forged requests
+- Prepared statements to prevent SQL Injection
+- Output escaping using htmlspecialchars() to prevent XSS
+- Session-based authentication to protect restricted pages
+- CSRF token implementation on login authentication to prevent forged requests
 
 ### Known Issues / Limitations
 
--Attendance calendar monthly view is not implemented (date-wise view is used instead)
--UI is optimized for desktop view only
--No email notifications for leave approval
--No password reset functionality
+- Attendance calendar monthly view is not implemented (date-wise view is used instead)
+- UI is optimized for desktop view only
+- No email notifications for leave approval
+- No password reset functionality
 
 ### Optional Enhancements (Future Scope)
 
--Monthly attendance calendar view
--Email notifications for leave status
--Mobile responsive UI
--Export attendance reports (PDF/Excel)
+- Monthly attendance calendar view
+- Email notifications for leave status
+- Mobile responsive UI
+- Export attendance reports (PDF/Excel)
