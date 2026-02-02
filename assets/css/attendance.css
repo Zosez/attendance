@@ -13,17 +13,19 @@ th,td{
 }
 th{
     font-size: 1.3em;
-    background-color: #A8DF8E;
+    background-color: #04433c;
+    color: white;
 }
-/*.search-date{
-    margin: 10px;
-    margin-right: 70px;
-    float: right;
-}*/
 .filter{
-    
     justify-self: right;
-    
-    margin: 10px;
     margin-right: 70px;
+    
+} 
+.search-emp{
+    float: left;
+    width: 40%;
+    height: 30px;
+    margin: 10px 0 10px 60px;
+    padding: 3px;
+    
 }

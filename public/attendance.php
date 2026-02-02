@@ -26,11 +26,13 @@
 			<p class="home-welcome"> Employees Present  </p>
 
 			<article class="table">
-				
-					<div class="filter">
-						<label>Date:</label>
-						<input type="Date" class="search-date" id="serch_date" >		
-					</div>
+
+				<input type="text" class="search-emp" id="search_att" placeholder="Search">
+
+				<div class="filter">
+					<label>Date:</label>
+					<input type="Date" class="search-date" id="search_date" >		
+				</div>
 					
 				
 				<table class="table" id="attendance_table">

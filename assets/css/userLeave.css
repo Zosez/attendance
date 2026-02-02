@@ -13,7 +13,8 @@ th,td{
 }
 th{
     font-size: 1.5em;
-    background-color: #A8DF8E;
+    background-color: #04433c;
+    color: white;
 }
 .status-text{
     font-weight: bold;

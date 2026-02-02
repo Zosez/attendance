@@ -1,8 +1,15 @@
 let API_URL = "http://localhost/attendance/config/server.php";
+// const API_URL = "https://student.heraldcollege.edu.np/~np03cs4a240115/attendance/config/server.php";
 
 let table = document.getElementById('employee_table');
 let searchInput = document.getElementById("serch_emp");
 let form=document.getElementById("edit-form");
+let pop = document.getElementById("form");
+const close = document.getElementById("close");
+
+close.addEventListener("click",function(){
+	pop.style.display="none";
+});
 
 function renderEmployee(employeeList){
 
@@ -67,7 +74,7 @@ searchInput.addEventListener("input",function(){
 
 function showEditForm(id,name,email,dept){
 	
-	form.style.display="Block";
+	pop.style.display="Block";
 	document.getElementById("edit-id").value=id;
 	document.getElementById("edit-name").value=name;
 	document.getElementById("edit-email").value=email;
@@ -107,7 +114,7 @@ async function updateEmployee(id,update){
 	});
 	if(response.ok){
 		
-		form.style.display='None';
+		pop.style.display='None';
 
 		fetchEmployee();
 		alert("Edited Succesfully");

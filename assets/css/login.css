@@ -33,7 +33,8 @@ html,body{
 	width: 100%;
 	height: 99vh;
 	border-radius: 10px 0 0 10px;
-	background-color: #A8DF8E;
+	/*background-color: #A8DF8E;*/
+	background-color: #04433c;
 }
 a{
 	text-decoration: none;

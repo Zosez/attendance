@@ -44,22 +44,26 @@
 					</tr>
 							
 				</table>
-
-				<form class="edit-form" id="edit-form">
+			<aside class="edit-form" id="form">
+				<div class="close" id="close">X</div>
+				<p class="edit-text">Edit Employee</p>
+				<form class="form" id="edit-form">
 					<input type="hidden" id="edit-id">	
 					<label>Full Name:</label>
-					<input type="text" id="edit-name">
+					<input type="text" id="edit-name" class="input">
 					<label>Email:</label>
-					<input type="Email" id="edit-email">
+					<input type="Email" id="edit-email" class="input">
 					<label>Department:</label>
-					<input type="Text" id="edit-department">
+					<input type="Text" id="edit-department" class="input">
 					<label>Role:</label>
-					<select id="edit-role">
+					<select id="edit-role" class="input">
 						<option value="user">User</option>
 						<option value="admin">Admin</option>
 					</select>
-					<input id="edit-btn" value="Submit" type="button" onclick="editBtn()">
+					<input class="edit" id="edit" value="Submit" type="button" onclick="editBtn()">
 				</form>
+				
+			</aside>
 				
 			</article>
 		</main>

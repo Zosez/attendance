@@ -6,13 +6,13 @@
 			</div>
 
 			<nav class="navigation">
-				<a href="../public/user.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon">Home</p></a>
+				<a href="../public/user.php"><p><img src="../images/home.png" class="nav-images" alt="Home icon" loading="lazy">Home</p></a>
 				
-				<a href="../public/userLeave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon">Leave History</p></a>
+				<a href="../public/userLeave.php"><p><img src="../images/leave.png" class="nav-images" alt="Leave icon" loading="">Leave History</p></a>
 
-				<a href="../public/userAttendance.php"><p><img src="../images/attendance.png" class="nav-images" alt="Leave icon">Attendance History</p></a>
+				<a href="../public/userAttendance.php"><p><img src="../images/attendance.png" class="nav-images" alt="Leave icon" loading="">Attendance History</p></a>
 
-				<a href="../public/userProfile.php"><p><img src="../images/user.png" class="nav-images" alt="Leave icon">Profile</p></a>
+				<a href="../public/userProfile.php"><p><img src="../images/user.png" class="nav-images" alt="Leave icon" loading>Profile</p></a>
 
 			</nav>
 

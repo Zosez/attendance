@@ -1,6 +1,8 @@
 ::-webkit-scrollbar{
 	display: none;
 }
+@import url('https://fonts.googleapis.com');
+
 
 html,body{
 	padding: 0;
@@ -18,10 +20,11 @@ html,body{
 	min-height: 99vh;
 }
 .home-welcome{
-	font-size: 2.7em;
+	font-size: 2.3em;
 	font-weight: bold;
 	justify-self: center;
 	margin-top: 20px;
+	font-family: 'Poppins', sans-serif;
 }
 .feature-card{
 	display: grid;
@@ -36,9 +39,10 @@ html,body{
 	border-radius: 8px;
 	padding: 10px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	color: white;
 	text-align: center;
 	/* background-color: #A8DF8E; */
-	background-color: #ADD8E6;
+	background-color: #04433c;
 }
 .feature p{
 	font-size: 1.6em;

@@ -39,7 +39,7 @@
 		<?php include "../includes/header.php" ?>
 
 		<main class="main-right">
-			<p class="home-welcome">Welcome to Hazir dashboard <?php echo htmlspecialchars($name) ?> !</p>
+			<p class="home-welcome">Welcome to HAZIR <?php echo htmlspecialchars($name) ?> !</p>
 
 			<article class="feature-card">
 				<div class="feature">

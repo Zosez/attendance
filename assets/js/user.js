@@ -1,4 +1,5 @@
 const API_URL = "http://localhost/attendance/config/leaveServer.php";
+// const API_URL = "https://student.heraldcollege.edu.np/~np03cs4a240115/attendance/config/leaveServer.php";
 
 const leaveBtn = document.getElementById("leave-btn");
 const popUp = document.getElementById("pop-up");

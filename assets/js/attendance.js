@@ -1,13 +1,13 @@
 let API_URL = "http://localhost/attendance/config/attendanceServer.php";
+// const API_URL = "https://student.heraldcollege.edu.np/~np03cs4a240115/attendance/config/attendanceServer.php";
 
 let table = document.getElementById('attendance_table');
-let searchInput = document.getElementById("serch_date");
+let search = document.getElementById("search_att");
+let searchInput = document.getElementById("search_date");
 const currentDateUTC = new Date().toISOString().slice(0, 10);
 
 
 searchInput.addEventListener("input",function(){
-
-	console.log(searchInput.value);
 
 	if(searchInput.value.trim()){
 		fetchAttendance(searchInput.value);
@@ -44,14 +44,14 @@ function renderAttendance(attendance){
 	}
 }
 
+
+
 async function fetchAttendance(date){
 	let response = await fetch(`${API_URL}?date=${date}`);
 
 	if(response.ok){
-		console.log(response);
-		let attendance =  await response.json();
-
-		console.log(attendance);
+		
+		attendance =  await response.json();
 
 		renderAttendance(attendance);
 	}
@@ -59,6 +59,15 @@ async function fetchAttendance(date){
 
 fetchAttendance(currentDateUTC);
 
+search.addEventListener("input",function(){
+	const searchTerm=search.value.toLowerCase();
+	const filteredAttendance = attendance.filter(att => {
+		const nameMatch = att['name'].toLowerCase().includes(searchTerm);
+		return nameMatch 
+		});
+	renderAttendance(filteredAttendance);
+
+});
 
 
 

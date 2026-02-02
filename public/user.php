@@ -47,19 +47,19 @@
 		<?php include "../includes/userHeader.php" ?>
 
 		<main class="main-right">
-			<p class="home-welcome">Welcome to Hazir dashboard <?php echo htmlspecialchars($name) ?> !!!</p>
+			<p class="home-welcome">Welcome to HAZIR <?php echo htmlspecialchars($name) ?> !</p>
 
 			<article>
 				<div class="attendance">
-					<h3 class="leave-text">Today's Attendance: </h3>
-					<form method="POST">
+					<p class="leave-text">Today's Attendance: </p>
+					<form method="POST" >
 						<button class="attendance-btn" name="attendance-btn" type="Submit" >Present</button>	
 					</form>
 					
 				</div>
 
 				<div class="req-leave">
-					<h3 class="leave-text">Request for leave:</h3>
+					<p class="leave-text">Request for leave:</p>
 					<button class="attendance-btn" id="leave-btn">Request</button>
 				</div>
 

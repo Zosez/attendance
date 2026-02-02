@@ -5,7 +5,7 @@
 .header-section {
 	width: 30%;
 	min-height: 99vh;
-	background-color: #A8DF8E;
+	background-color: #04433c;
 }
 .user-info{ 
 	display: flex;
@@ -21,11 +21,13 @@
 .user-name{
 	font-size: 1.4em;
 	font-weight: bold;
+	color: white;
 }
 .navigation{
 	font-size: 1.6em;	
 	padding: 5px;
 	margin-left: 30px;
+
 }
 .nav-images{
 	width:30 px; 
@@ -34,7 +36,7 @@
 	margin-right: 5px;
 }
 .navigation a p{
-	color: black;
+	color: white;
 }
 .navigation a p:hover{
 	color: grey;
@@ -43,7 +45,7 @@ a{
 	text-decoration: none;
 }
 .logout{
-	color: black;
+	color: white;
 	font-size: 1.5em;	
 	justify-self: center;
 	/* margin-top: 90px; */
